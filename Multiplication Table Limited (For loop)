@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int x,y = 1;
+    cout << "Enter the number to process its multiplication table:" << endl;
+    cin >> x;
+    while (cin.fail())
+    {
+        cout << "Invalid input. Enter the number again: " << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin >> x;
+    }
+    cout << "Enter the number you want the table to end to:" << endl;
+    cin >> y;
+    while (cin.fail())
+    {
+        cout << "Invalid input. Enter the number again: " << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cin >> y;
+    }
+
+    cout << "\n\nMultiplication table: " << endl;
+    for (int a = 1; a <= y; a++)
+    {
+        cout << x << " * " << a << " = " << x * a << endl;
+
+    }
+
+    return 0;
+}
