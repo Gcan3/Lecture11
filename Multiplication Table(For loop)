@@ -6,6 +6,13 @@ int main()
     int x;
     cout << "Enter the number to process its multiplication table (up to 10):" << endl;
     cin >> x;
+    while (cin.fail())
+	{
+		cout << "Invalid input. Enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
     cout << "\n\nMultiplication table: " << endl;
     for (int y = 1; y <= 10; y++)
     {
