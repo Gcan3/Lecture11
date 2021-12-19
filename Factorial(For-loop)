@@ -6,6 +6,13 @@ int main()
     int x, fact = 1;
     cout << "Enter the number to find its factorial:" << endl;
     cin >> x;
+    while (cin.fail())
+	{
+		cout << "Invalid input. Enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
     for (int y = x; y > 0; y--)
     {
         fact = y * fact;
