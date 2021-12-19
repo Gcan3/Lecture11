@@ -6,8 +6,14 @@ int main()
     int x;
     cout << "Enter the number to process its multiplication table (up to 10):" << endl;
     cin >> x;
+    while (cin.fail())
+	{
+		cout << "Invalid input. Enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
     cout << "\n\nMultiplication table: " << endl;
-
     int y = 1;
     while (y <= 10) {
         cout << x << " * " << y << " = " << x * y << endl;
