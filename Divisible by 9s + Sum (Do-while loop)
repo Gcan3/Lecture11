@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+int main()
+{
+    int x = 0, y = 1;
+    do {
+        if (x % 9 == 0) {
+            cout << "The Number " << x << " is divisible by 9." << endl;
+            y = y + x;
+        }
+        x++;
+    } while (x <= 200);
+
+    cout << "\n\nThe sum for all the numbers divisible by 9 is " << y << endl;
+
+    return 0;
+}
